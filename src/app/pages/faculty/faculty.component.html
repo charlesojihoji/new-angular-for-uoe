@@ -1,0 +1,15 @@
+<div class="container">
+    <br>
+    <h2>All Faculty Members</h2>
+    <br>
+    
+    <div class="row">
+            
+            @for(faculty of faculties; track faculty){
+                <div class="col-md-4">
+                    <app-card [title]="faculty.fullName" [subtitle]="faculty.phoneNumber" [content]="faculty.emailAddress"/>
+                </div>
+            }
+    
+    </div>
+</div>
