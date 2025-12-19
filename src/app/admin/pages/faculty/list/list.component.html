@@ -1,1 +1,28 @@
-<p>list works!</p>
+<h4>The List of Faculty Members</h4>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Email Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let faculty of faculties">
+            <td>{{faculty.id}}</td>
+            <td>{{faculty.fullName}}</td>
+            <td>{{faculty.address}}</td>
+            <td>{{faculty.phoneNumber}}</td>
+            <td>{{faculty.emailAddress}}</td>
+            <td>
+                <a href="/admin/faculty/{{faculty.id}}" class="btn btn-primary" >Show</a>
+                <a href="/admin/faculty/{{faculty.id}}/edit" class="btn btn-primary" >Edit</a>
+                <button class="btn btn-danger" (click)="deleteFaculty(faculty.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
