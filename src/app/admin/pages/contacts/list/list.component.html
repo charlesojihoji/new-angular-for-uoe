@@ -1,1 +1,28 @@
-<p>list works!</p>
+<h4>The List of Contacts</h4>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Number of Messages</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contacts">
+            <td>{{contact.id}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.mobile}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.message}}</td>
+            <td>
+                <a href="/admin/contacts/{{contact.id}}" class="btn btn-primary" >Show</a>
+                <a href="/admin/contacts/{{contact.id}}/edit" class="btn btn-primary" >Edit</a>
+                <button class="btn btn-danger" (click)="deleteContact(contact.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

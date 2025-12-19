@@ -1,1 +1,9 @@
-<p>show works!</p>
+<h3>Faculty Details</h3>
+<br>
+<div *ngIf="faculty">
+    <p><b>Id:</b> {{faculty.id}}</p>
+    <p><b>Name:</b> {{faculty.fullName}}</p>
+    <p><b>Address:</b> {{faculty.address}}</p>
+    <p><b>Phone Number:</b> {{faculty.phoneNumber}}</p>
+    <p><b>Email Address:</b> {{faculty.emailAddress}}</p>
+</div>

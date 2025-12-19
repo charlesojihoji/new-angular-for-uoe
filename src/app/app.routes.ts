@@ -5,8 +5,10 @@ import { ContactComponent } from './front/pages/contact/contact.component';
 import { FacultyComponent } from './front/pages/faculty/faculty.component';
 import { CoursesComponent } from './front/pages/courses/courses.component';
 import { FrontComponent } from './front/front.component';
-import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
+
+import { adminRoutes } from './admin/admin.routes';
+import { AdminStudentsComponent } from './admin/pages/students/students.component';
 
 export const routes: Routes = [
     {path: '', component: FrontComponent, children: [
@@ -14,10 +16,11 @@ export const routes: Routes = [
         {path: 'about', component: AboutComponent},
         {path: 'contact', component: ContactComponent},
         {path: 'courses', component: CoursesComponent},
-        {path: 'faculty', component: FacultyComponent}
+        {path: 'faculty', component: FacultyComponent},
+        {path: 'students', component: AdminStudentsComponent}
     ]},
 
-    {path: 'admin', component: AdminComponent},
+    ...adminRoutes,
 
     {path: 'user', component: UserComponent}
     

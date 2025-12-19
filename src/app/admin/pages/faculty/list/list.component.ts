@@ -1,11 +1,26 @@
-import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-list',
-  imports: [],
+  imports: [NgFor],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
-export class ListComponent {
+export class FacultyListComponent {
 
+  http=inject(HttpClient);
+  
+  faculties: any=[]
+
+  constructor() {
+    this.http.get("http://localhost:9090/faculty").subscribe((res: any)=>{
+      console.log(res);
+      this.faculties=res;
+    })
+  }
+  deleteFaculty(id: number) {
+    this.faculties = this.faculties.filter((faculty: any) => faculty.id !== id);
+  }
 }
