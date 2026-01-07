@@ -20,7 +20,6 @@ export class FacultyEditComponent {
 
   http=inject(HttpClient);
   router=inject(Router);
-
   route = inject(ActivatedRoute);
   
   constructor() {

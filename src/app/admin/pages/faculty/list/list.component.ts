@@ -20,7 +20,4 @@ export class FacultyListComponent {
       this.faculties=res;
     })
   }
-  deleteFaculty(id: number) {
-    this.faculties = this.faculties.filter((faculty: any) => faculty.id !== id);
-  }
 }

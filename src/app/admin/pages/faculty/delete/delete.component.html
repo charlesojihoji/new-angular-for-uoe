@@ -1,1 +1,14 @@
-<p>delete works!</p>
+<h4>These are the Faculty Details of the faculty member to be deleted</h4>
+<br>
+<div *ngIf="faculty">
+    <p><b>Id:</b> {{faculty.id}}</p>
+    <p><b>Name:</b> {{faculty.fullName}}</p>
+    <p><b>Address:</b> {{faculty.address}}</p>
+    <p><b>Phone Number:</b> {{faculty.phoneNumber}}</p>
+    <p><b>Email Address:</b> {{faculty.emailAddress}}</p>
+    <br>
+
+    <h4>Are you sure you want to delete this Faculty?</h4>
+    <button class="btn btn-danger" (click)="deleteFaculty(faculty.id)">Delete</button>
+    <a href = "/admin/faculty" class="btn btn-primary">Cancel</a>
+</div>

@@ -23,12 +23,15 @@ export class ContactCreateComponent {
   
   onSubmit() {
 
-    this.http.post("http://localhost:9494/contact", {contactName: this.name.value, emailAddress: this.email.value, phoneNumber: this.mobile.value, address: this.address.value, messageContent: this.message.value}).subscribe(res=>{
+    this.http.post("http://localhost:9494/contact", {contactName: this.name.value, emailAddress: this.email.value, phoneNumber: this.mobile.value, address: this.address.value, contactDetailsMessagesDTOList:[{messageContent: this.message.value}]}).subscribe(res=>{
       console.log(res);
 
-      alert("Contact Added Successfully");
+      // alert("Contact Added Successfully");
 
-      this.router.navigate(["/admin/contacts"]);
+      // this.router.navigate(["/admin/contacts"]);
     })
+    alert("Contact Added Successfully");
+
+    this.router.navigate(["/admin/contacts"]);
   }
 }
