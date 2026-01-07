@@ -1,1 +1,9 @@
-<p>show works!</p>
+<h3>The Student Details</h3>
+<br>
+<div *ngIf="student">
+    <p><b>Id:</b> {{student.id}}</p>
+    <p><b>Name:</b> {{student.fullName}}</p>
+    <p><b>Address:</b> {{student.address}}</p>
+    <p><b>Phone Number:</b> {{student.phoneNumber}}</p>
+    <p><b>Email Address:</b> {{student.emailAddress}}</p>
+</div>

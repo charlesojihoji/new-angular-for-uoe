@@ -1,0 +1,14 @@
+<h4>These are the Faculty Details of the faculty member to be deleted</h4>
+<br>
+<div *ngIf="contact">
+    <p><b>Id:</b> {{contact.contactId}}</p>
+    <p><b>Name:</b> {{contact.contactName}}</p>
+    <p><b>Address:</b> {{contact.address}}</p>
+    <p><b>Phone Number:</b> {{contact.phoneNumber}}</p>
+    <p><b>Email Address:</b> {{contact.emailAddress}}</p>
+    <br>
+
+    <h4>Are you sure you want to delete this Contact?</h4>
+    <button class="btn btn-danger" (click)="deleteContact(contact.contactId)">Delete</button>
+    <a href = "/admin/contacts" class="btn btn-primary">Cancel</a>
+</div>

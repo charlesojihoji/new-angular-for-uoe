@@ -20,6 +20,7 @@ import { StudentsCreateComponent } from "./pages/students/create/create.componen
 import { StudentsEditComponent } from "./pages/students/edit/edit.component";
 import { StudentsShowComponent } from "./pages/students/show/show.component";
 import { StudentsDeleteComponent } from "./pages/students/delete/delete.component";
+import { ContactDeleteComponent } from "./pages/contacts/delete/delete.component";
 
 export const adminRoutes: Routes = [
 
@@ -29,7 +30,8 @@ export const adminRoutes: Routes = [
             {path: '', component: ContactListComponent},
             {path: 'create', component: ContactCreateComponent},
             {path: ':id', component: ContactShowComponent},
-            {path: ':id/edit', component: ContactEditComponent}
+            {path: ':id/edit', component: ContactEditComponent},
+            {path: ':id/delete', component: ContactDeleteComponent}
         ]},
         {path: 'courses', component: CoursesComponent},
         {path: 'faculty', component: AdminFacultyComponent, children: [

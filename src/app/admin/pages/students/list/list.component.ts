@@ -19,7 +19,4 @@ export class StudentsListComponent {
       this.students=res;
     })
   }
-  deleteStudent(id: number) {
-    this.students = this.students.filter((students: any) => this.students.id !== id);
-  }
 }

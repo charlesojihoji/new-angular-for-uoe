@@ -1,11 +1,11 @@
 <h3>Contact Details</h3>
 
 <div *ngIf="contact">
-    <p><b>Id:</b> <br>{{contact.contactId}}</p>
-    <p><b>Name:</b> <br>{{contact.contactName}}</p>
-    <p><b>Mobile:</b> <br>{{contact.phoneNumber}}</p>
-    <p><b>Email:</b> <br>{{contact.emailAddress}}</p>
-    <p><b>Address:</b> <br>{{contact.address}}</p>
+    <p><b>Id: </b>{{contact.contactId}}</p>
+    <p><b>Name: </b>{{contact.contactName}}</p>
+    <p><b>Mobile: </b>{{contact.phoneNumber}}</p>
+    <p><b>Email: </b>{{contact.emailAddress}}</p>
+    <p><b>Address: </b>{{contact.address}}</p>
     <p><b>Message:</b> <br>{{contact.messageContent}}</p>
     <ul>
         <li *ngFor="let message of contact.contactDetailsMessagesDTOList">{{message.messageContent}}</li>
