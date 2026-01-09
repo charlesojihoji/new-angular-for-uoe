@@ -27,8 +27,11 @@ export class ContactDeleteComponent {
   deleteContact(id: string) {
     this.http.delete(`http://localhost:9494/contact/${id}`).subscribe((res: any) => {
       console.log(res);
-      alert("Contact Successfully Deleted");
-      this.router.navigate(["/admin/contacts"]);
+      // alert("Contact Successfully Deleted");
+      // this.router.navigate(["/admin/contacts"]);
     })
+
+    alert("Contact Successfully Deleted");
+    this.router.navigate(["/admin/contacts"]);
   }
 }
