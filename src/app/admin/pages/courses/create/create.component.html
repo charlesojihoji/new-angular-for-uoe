@@ -1,1 +1,20 @@
-<p>create works!</p>
+
+<div class="container">
+<app-card title="Add a New Course">
+  <form>
+    <div class="mb-3">
+        <label for="course_name" class="form-label">Course Name</label>
+        <input type="text" [formControl]="course_name" class="form-control" id="name" placeholder="course name">
+      </div>
+    <div class="mb-3">
+        <label for="faculty_name" class="form-label">Faculty Name</label>
+        <input type="text" [formControl]="faculty_name" class="form-control" id="faculty_name" placeholder="Faculty Name">
+      </div>
+      <div class="mb-3">
+        <label for="students_enrolled" class="form-label">Students Enrolled</label>
+        <input type="text" [formControl]="students_enrolled" class="form-control" id="students_enrolled" placeholder="Students Enrolled">
+      </div>
+      <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+  </form>
+</app-card>
+</div>
