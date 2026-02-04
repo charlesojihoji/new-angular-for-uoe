@@ -10,8 +10,10 @@ import { Component, inject } from '@angular/core';
 })
 export class CoursesListComponent {
 
-  http=inject(HttpClient)
-  courses: any=[]
+  http=inject(HttpClient);
+  
+  courses: any=[];
+
   constructor() {
     this.http.get("http://localhost:9696/courses").subscribe((res: any)=>{
       console.log(res);

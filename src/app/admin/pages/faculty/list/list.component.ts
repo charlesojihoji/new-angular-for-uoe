@@ -12,7 +12,7 @@ export class FacultyListComponent {
 
   http=inject(HttpClient);
   
-  faculties: any=[]
+  faculties: any=[];
 
   constructor() {
     this.http.get("http://localhost:9090/faculty").subscribe((res: any)=>{
