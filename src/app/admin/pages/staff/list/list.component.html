@@ -1,1 +1,30 @@
-<p>list works!</p>
+<h4>The List of Staff Members</h4>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Phone Number</th>
+            <th>Email Address</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let staff of staffmembers">
+            <td>{{staff.staffId}}</td>
+            <td>{{staff.staffName}}</td>
+            <td>{{staff.title}}</td>
+            <td>{{staff.phoneNumber}}</td>
+            <td>{{staff.emailAddress}}</td>
+             <td>{{staff.address}}</td>
+            <td>
+                <a href="/admin/staff/{{staff.staffId}}" class="btn btn-primary" >Show</a>
+                <a href="/admin/staff/{{staff.staffId}}/edit" class="btn btn-primary" >Edit</a>
+                <a href ="/admin/staff/{{staff.staffId}}/delete" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

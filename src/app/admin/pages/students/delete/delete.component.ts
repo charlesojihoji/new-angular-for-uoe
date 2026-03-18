@@ -12,11 +12,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class StudentsDeleteComponent {
 
   student: any;
-
   http = inject(HttpClient);
-  
   route = inject(ActivatedRoute);
-  
   router = inject(Router);
 
   constructor() {

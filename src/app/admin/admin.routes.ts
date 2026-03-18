@@ -26,6 +26,12 @@ import { CoursesCreateComponent } from "./pages/courses/create/create.component"
 import { CoursesEditComponent } from "./pages/courses/edit/edit.component";
 import { CoursesShowComponent } from "./pages/courses/show/show.component";
 import { CoursesDeleteComponent } from "./pages/courses/delete/delete.component";
+import { AdminStaffComponent } from "./pages/staff/staff.component";
+import { StaffListComponent } from "./pages/staff/list/list.component";
+import { StaffCreateComponent } from "./pages/staff/create/create.component";
+import { StaffEditComponent } from "./pages/staff/edit/edit.component";
+import { StaffShowComponent } from "./pages/staff/show/show.component";
+import { StaffDeleteComponent } from "./pages/staff/delete/delete.component";
 
 export const adminRoutes: Routes = [
 
@@ -59,6 +65,12 @@ export const adminRoutes: Routes = [
             {path: ':id', component: StudentsShowComponent},
             {path: ':id/delete', component: StudentsDeleteComponent}
         ]},
-        {path: 'user', component: UserComponent}
+        {path: 'staff', component: AdminStaffComponent, children: [
+            {path: '', component: StaffListComponent},
+            {path: 'create', component: StaffCreateComponent},
+            {path: ':id/edit', component: StaffEditComponent},
+            {path: ':id', component: StaffShowComponent},
+            {path: ':id/delete', component: StaffDeleteComponent}
+        ]}
     ]},
 ]

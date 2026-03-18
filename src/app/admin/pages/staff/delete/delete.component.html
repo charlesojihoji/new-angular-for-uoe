@@ -1,0 +1,14 @@
+<h4>These are the Staff Details of the Staff Memeber to be deleted</h4>
+<br>
+<div *ngIf="staff">
+    <p><b>Id:</b> {{staff.staffId}}</p>
+    <p><b>Name:</b> {{staff.staffName}}</p>
+    <p><b>Phone Number:</b> {{staff.phoneNumber}}</p>
+    <p><b>Email Address:</b> {{staff.emailAddress}}</p>
+    <p><b>Address:</b> {{staff.address}}</p>
+    <br>
+
+ <h4>Are you sure you want to delete this Student?</h4>
+    <button class="btn btn-danger" (click)="deleteStaff(staff.staffId)">Delete</button>
+    <a href = "/admin/staff" class="btn btn-primary">Cancel</a>
+</div>

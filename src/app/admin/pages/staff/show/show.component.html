@@ -1,1 +1,9 @@
-<p>show works!</p>
+<h3>The Staff Member's Details</h3>
+<br>
+<div *ngIf="staff">
+    <p><b>Id:</b> {{staff.staffId}}</p>
+    <p><b>Name:</b> {{staff.staffName}}</p>
+    <p><b>Address:</b> {{staff.address}}</p>
+    <p><b>Phone Number:</b> {{staff.phoneNumber}}</p>
+    <p><b>Email Address:</b> {{staff.emailAddress}}</p>
+</div>
