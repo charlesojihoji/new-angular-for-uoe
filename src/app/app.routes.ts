@@ -18,6 +18,7 @@ export const routes: Routes = [
         {path: 'courses', component: CoursesComponent},
         {path: 'faculty', component: FacultyComponent},
         {path: 'students', component: AdminStudentsComponent}
+
     ]},
 
     ...adminRoutes,
