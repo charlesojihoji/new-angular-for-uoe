@@ -1,0 +1,15 @@
+<div class="container p-5">
+<app-card title="Login">
+    <form>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" [formControl]="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" [formControl]="password" class="form-control" id="password" placeholder="yourpassword">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="onSubmit()">Login</button>
+    </form>
+</app-card>
+</div>
