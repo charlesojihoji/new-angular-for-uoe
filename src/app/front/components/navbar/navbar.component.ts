@@ -11,7 +11,9 @@ export class NavbarComponent {
   @Input() navs=[
     {link:'/', level:'Home'},
     {link:'/about', level:'About'},
-    {link:'/contact', level: 'Contact'}
+    {link:'/contact', level: 'Contact'},
+    {link:'/courses', level: 'Courses'}
+
   ];
   
 }

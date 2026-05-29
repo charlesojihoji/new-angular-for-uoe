@@ -1,0 +1,30 @@
+<div class="container p-5">
+<app-card title="Register">
+    <form>
+        <div class="mb-3">
+            <label for="full_name" class="form-label">Full Name</label>
+            <input type="text" [formControl]="full_name" class="form-control" id="full_name" placeholder="Put Your Name">
+        </div>
+        <div class="mb-3">
+            <label for="phone_number" class="form-label">Phone Number</label>
+            <input type="text" [formControl]="phone_number" class="form-control" id="phone_number" placeholder="Phone Number">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" [formControl]="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" [formControl]="password" class="form-control" id="password" placeholder="yourpassword">
+        </div>
+        <div class="mb-3">
+            <label for="role" class="form-label">Role</label>
+            <select [formControl]="role" class="form-select" id="role">
+                <option value="faculty">Faculty</option>
+                <option value="student">Student</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="onSubmit()">Register</button>
+    </form>
+</app-card>
+</div>
