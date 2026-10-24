@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
+import { FacultyCardComponent } from '../../components/faculty-card/faculty-card.component';
 
 @Component({
   selector: 'app-faculty',
-  imports: [CardComponent],
+  imports: [CardComponent, FacultyCardComponent],
   templateUrl: './faculty.component.html',
   styleUrl: './faculty.component.css'
 })

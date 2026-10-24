@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
+import { CourseCardComponent } from '../../components/course-card/course-card.component';
 
 @Component({
   selector: 'app-courses',
-  imports: [],
+  imports: [CourseCardComponent],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })
@@ -16,7 +17,7 @@ export class CoursesComponent {
   ngOnInit(){
     console.log('ComponentInit');
 
-    this.http.get("http://localhost:9292/grades").subscribe((res: any)=>{
+    this.http.get("http://localhost:9696/courses").subscribe((res: any)=>{
       console.log(res);
       
       //Sift through the courses and avoid returning duplicate courses

@@ -1,37 +1,30 @@
 <div class="container mb-5">
   <h1>Welcome to the Students Dashboard</h1>
-  <p>This is where you can find all your courses, assignments, and grades.</p>
+  <p>This is where you can find all the courses and faculty members.</p>
  
-  <app-card class="mb-3" title="All My Courses">
+  <app-card class="mb-3" title="All Courses">
     <div class="row">
+      @for(c of courses; track c.courseid){
         <div class="col-md-4">
-            <course-card></course-card>
+            <course-card [course]="c"></course-card>
         </div>
-        <div class="col-md-4">
-            <course-card></course-card>
-        </div>
-        <div class="col-md-4">
-            <course-card></course-card>
-        </div>
+      }
     </div>
   </app-card>
- 
+
   <div class="row">
-    <div class="col-md-6">
-      <app-card title="My Tutors">
+    <div class="col-md-12">
+      <app-card title="All Faculty Members">
         <div class="row">
+        @for(f of faculty; track f.id){
             <div class="col-md-4 text-center">
-                <tutor-card></tutor-card>
+                <tutor-card [tutor]="f"></tutor-card>
             </div>
-            <div class="col-md-4 text-center">
-                <tutor-card></tutor-card>
-            </div>
-            <div class="col-md-4 text-center">
-                <tutor-card></tutor-card>
-            </div>
-        </div>
+        }
+        </div>  
       </app-card>
     </div>
+    <!--
     <div class="col-md-6">
       <app-card title="My Assignments">
         <ul class="list-group list-group-flush">
@@ -46,5 +39,6 @@
       </app-card>
     </div>
   </div>
+  -->
 </div>
  

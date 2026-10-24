@@ -15,7 +15,7 @@ export class FrontComponent {
     {link:'/about', level:'About'},
     {link:'/contact', level: 'Contact'},
     {link:'/courses', level: 'Courses'},
-    {link:'/faculty', level: 'Faculty'},
+    {link:'/faculties', level: 'Faculties'},
     {link:'/login', level: 'Login'},
     {link:'/register', level: 'Register'}
   ];
