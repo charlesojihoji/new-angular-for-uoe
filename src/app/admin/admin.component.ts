@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -9,5 +9,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './admin.component.css'
 })
 export class AdminComponent {
+
+  // router = inject(Router);
+  
+  // constructor() {
+
+  //   if(localStorage.getItem('role') != 'admin'){
+
+  //     this.router.navigate(['']);
+  //   }
+  // }
 
 }

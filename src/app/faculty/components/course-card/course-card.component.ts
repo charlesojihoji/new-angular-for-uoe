@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'course-card',
@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class CourseCardComponent {
 
+  @Input() course = {
+    courseId: 0,
+    courseName: "Course Name",
+    courseDescription: "Course Description",
+    courseImage: "",
+    courseStartDate: "",
+    courseEndDate: ""
+  }
 }

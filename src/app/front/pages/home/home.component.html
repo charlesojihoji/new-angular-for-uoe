@@ -12,17 +12,17 @@
         </div>
         <div class="col">
             <app-card title="Login">
-                <form>
+                <div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <input type="email" [formControl]="email" class="form-control" id="email" placeholder="name@example.com">
                       </div>
                       <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="yourpassword">
+                        <input type="password" [formControl]="password" class="form-control" id="password" placeholder="yourpassword">
                       </div>    
-                      <button type="submit" class="btn btn-primary">Login</button>
-                </form>
+                      <button type="button" class="btn btn-primary" (click) ="login()">Login</button>
+                </div>
             </app-card>
         </div>
         <div class="col">

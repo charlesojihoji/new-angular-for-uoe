@@ -25,13 +25,21 @@ export class LoginComponent {
     this.http.post("http://localhost:9595/api/auth/login", {emailAddress: this.email.value, password: this.password.value}).subscribe((res: any) => {
       console.log(res);
 
-      if(res.roles[0] == 'ROLE_ADMIN') this.router.navigate(['admin']);
+      if(res.roles[0] == 'ROLE_ADMIN') {
+        localStorage.setItem('role', 'admin');
+        this.router.navigate(['admin']);
+      }
 
-      if(res.roles[0] == 'ROLE_FACULTY') this.router.navigate(['faculty']);
+      if(res.roles[0] == 'ROLE_FACULTY'){
+       localStorage.setItem('role', 'faculty');
+       this.router.navigate(['faculty']);
+      } 
 
-      if(res.roles[0] == 'ROLE_STUDENT') this.router.navigate(['student']);
-
-      //this.router.navigate(['home']);
+      if(res.roles[0] == 'ROLE_STUDENT'){
+        localStorage.setItem('role', 'student');
+        this.router.navigate(['student']);
+      }
+      
     }, error => console.log(error));
   }
 

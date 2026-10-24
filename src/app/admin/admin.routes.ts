@@ -32,10 +32,11 @@ import { StaffCreateComponent } from "./pages/staff/create/create.component";
 import { StaffEditComponent } from "./pages/staff/edit/edit.component";
 import { StaffShowComponent } from "./pages/staff/show/show.component";
 import { StaffDeleteComponent } from "./pages/staff/delete/delete.component";
+import { authGuard } from "./auth.guard";
 
 export const adminRoutes: Routes = [
 
-    {path: 'admin', component: AdminComponent, children: [
+    {path: 'admin', component: AdminComponent, canActivate: [authGuard], children: [
         {path: '', component: DashboardComponent},
         {path: 'contacts', component: ContactsComponent, children: [
             {path: '', component: ContactListComponent},
